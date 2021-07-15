@@ -53,14 +53,26 @@ Using the burger object below do the following:
 
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
+
+let newPrice;
+
 const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
-}
+  discount(customer){
+    if (customer==="teacher" || customer==="student"){
+      newPrice = this.price - (this.price*.25);
+    }
+    else {
+      newPrice = this.price - (this.price*.1);
+    };
+    return newPrice;
+  },
+};
 
-
+console.log(burger.discount("student"));
+console.log(burger.discount("public"));
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
