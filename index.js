@@ -123,11 +123,7 @@ function addReview(array, newName, newRating, newFeedback){
   return array;
 };
 
-let newReviews = [];
-
-console.log(addReview(newReviews, `Daniela`, 5, `Beautiful atmosphere and wonderful vegan options!`));
-
-
+console.log(addReview(reviews, `Daniela`, 5, `Beautiful atmosphere and wonderful vegan options!`));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -140,11 +136,12 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
-}
+function getReviewByIndex(array, index) {
+  const newString = array[index].name + " gave the restaurant a " + array[index].rating + " star review, and their feedback was: " + array[index].feedback;
+  return newString;
+};
 
-
+console.log(getReviewByIndex(reviews,0));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
