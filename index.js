@@ -101,7 +101,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
 */
 
 reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
-/*console.log(reviews);*/
+console.log(reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -123,7 +123,6 @@ function addReview(array, newName, newRating, newFeedback){
   return array;
 };
 
-console.log(addReview(reviews, `Daniela`, 5, `Beautiful atmosphere and wonderful vegan options!`));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -155,12 +154,12 @@ Use the getLastReview function below to do the following:
   For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
 */
 
+function getLastReview(array) {
+  const newestString = array[array.length - 1].name + " gave the restaurant a " + array[array.length - 1].rating + " star review, and their feedback was: " + array[array.length - 1].feedback;
+  return newestString;
+};
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
-} 
-
-
+console.log(getLastReview(reviews));
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
